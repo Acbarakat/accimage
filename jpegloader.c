@@ -7,6 +7,12 @@
     #error libjpeg-turbo required (not IJG libjpeg)
 #endif
 
+#ifdef _WIN32
+	#include "libfmemopen.h"
+    #ifndef libfmemopen_windows
+        #error libfmemopen required
+    #endif
+#endif
 
 struct accimage_jpeg_error_mgr {
     struct jpeg_error_mgr pub;
