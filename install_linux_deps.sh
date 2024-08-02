@@ -7,3 +7,4 @@ echo "deb [signed-by=/usr/share/keyrings/oneapi-archive-keyring.gpg] https://apt
 sudo apt update
 
 sudo apt install intel-oneapi-ipp-devel libjpeg-turbo8-dev
+echo 'export LD_LIBRARY_PATH=/opt/intel/oneapi/ipp/2021.12/lib/:$LD_LIBRARY_PATH' >> ~/.bashrc
