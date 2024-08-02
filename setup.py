@@ -1,10 +1,9 @@
 import platform
 from setuptools import setup, Extension
 
-include_dirs = ["/usr/local/opt/jpeg-turbo/include", "/opt/intel/ipp/include"],
-library_dirs=["/usr/local/opt/jpeg-turbo/lib", "/opt/intel/ipp/lib"]
+include_dirs = ["/usr/local/opt/jpeg-turbo/include", "/opt/intel/oneapi/ipp/2021.12/include/ipp"]
+library_dirs=["/usr/local/opt/jpeg-turbo/lib", "/opt/intel/oneapi/ipp/2021.12/lib"]
 sources=["accimagemodule.c", "jpegloader.c", "imageops.c"]
-print(platform.system())
 if platform.system() == "Windows":
     include_dirs = ["C:/libjpeg-turbo64/include", "C:/Program Files (x86)/Intel/oneAPI/ipp/2021.10/include/ipp"]
     library_dirs=["C:/libjpeg-turbo64/lib", "C:/Program Files (x86)/Intel/oneAPI/ipp/2021.10/lib"]
